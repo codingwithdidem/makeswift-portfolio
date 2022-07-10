@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import styles from "./GlowCard.module.css";
+import styles from "./glowCard.module.css";
 
 type GlowCardProps = {
   pictureUrl?: string;
