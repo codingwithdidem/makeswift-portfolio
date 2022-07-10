@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./GlowCard.module.css";
 
 type GlowCardProps = {
-  pictureUrl: string;
+  pictureUrl?: string;
   className?: string;
 };
 const GlowCard = ({ pictureUrl, className }: GlowCardProps) => {
