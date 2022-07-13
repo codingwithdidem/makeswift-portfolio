@@ -7,11 +7,8 @@
   -webkit-backdrop-filter: blur(11px);
   border: 1px solid rgba(21, 24, 35, 0.3);
   width: 500px;
-  height: 350px;
+  height: auto;
   padding: "1rem";
-  -webkit-box-shadow: 0px 0px 118px 45px rgba(102, 94, 255, 0.9);
-  -moz-box-shadow: 0px 0px 118px 45px rgba(102, 94, 255, 0.9);
-  box-shadow: 0px 0px 118px 45px rgba(102, 94, 255, 0.9);
 }
 
 .image {

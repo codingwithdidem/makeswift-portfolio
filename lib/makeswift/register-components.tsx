@@ -1,9 +1,7 @@
 import {
   Style,
-  List,
   Shape,
   TextInput,
-  TextArea,
   Color,
   Image,
 } from "@makeswift/runtime/controls";
@@ -12,23 +10,27 @@ import GlowCard from "../../components/GlowCard/GlowCard";
 
 // Register your components here!
 
-function HelloWorld(props: { className?: string }) {
-  return <p {...props}>Hello, world!</p>;
-}
-
-ReactRuntime.registerComponent(HelloWorld, {
-  type: "hello-world",
-  label: "Hello, world!",
-  props: {
-    className: Style({ properties: Style.All }),
-  },
-});
-
 ReactRuntime.registerComponent(GlowCard, {
   type: "glowcard",
   label: "GlowCard",
   props: {
     className: Style({ properties: Style.All }),
     pictureUrl: Image({ label: "Profile Picture" }),
+    boxShadow: Shape({
+      label: "Box Shadow",
+      type: {
+        color: Color({
+          label: "Color",
+          defaultValue: "rgba(102, 94, 255, 0.9)",
+        }),
+        offsetX: TextInput({ label: "Offset X", defaultValue: "0px" }),
+        offsetY: TextInput({ label: "Offset Y", defaultValue: "0px" }),
+        blurRadius: TextInput({ label: "Blur Radius", defaultValue: "118px" }),
+        spreadRadius: TextInput({
+          label: "Spread Radius",
+          defaultValue: "45px",
+        }),
+      },
+    }),
   },
 });
